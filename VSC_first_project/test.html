@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./css/style_test.css">
+    <!-- <script src="http://code.jquery.com/jquery-1.8.1.min.js"></script> -->
+    <script>
+        $(document).ready(function () {
+            $(".main>li").click(function () {
+                $(this).children(".sub").stop().slideDown();
+            });
+            $(".main>li").mouseleave(function () {
+                $(this).children(".sub").stop().slideUp();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="nav">
+        <ul class="main">
+            <li><a href="#">MAIN 01</a></li>
+            <li><a href="#">MAIN 02</a>
+                <ul class="sub">
+                    <li><a href="#">SUB 01</a></li>
+                    <li><a href="#">SUB 02</a></li>
+                    <li><a href="#">SUB 03</a></li>
+                    <li><a href="#">SUB 04</a></li>
+                </ul>
+            </li>
+            <li><a href="#">MAIN 03</a>
+                <ul class="sub">
+                    <li><a href="#">SUB 05</a></li>
+                    <li><a href="#">SUB 06</a></li>
+                    <li><a href="#">SUB 07</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
